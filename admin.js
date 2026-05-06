@@ -1,5 +1,6 @@
 
 import {auth,db,signInWithEmailAndPassword,signOut,onAuthStateChanged,collection,addDoc,updateDoc,deleteDoc,doc,onSnapshot,query,orderBy,serverTimestamp} from './firebase.js';
+window.toggleLang=function(){localStorage.setItem('kogalym_lang',(localStorage.getItem('kogalym_lang')||'ru')==='ru'?'en':'ru');location.reload()};window.toggleMenu=function(){document.getElementById('mobileMenu')?.classList.toggle('open')};
 let current='announcements', editId=null;const names={announcements:'Объявления',news:'Новости',events:'Афиша',places:'Места / бизнес'};const cats={announcements:['Услуги','Работа','Недвижимость','Продажа','Туризм','Бизнес'],news:['Город','История','Юбилей','Спорт','Культура'],events:['Концерт','Спорт','Дети','Культура','Город'],places:['Кафе','Гостиница','Достопримечательность','Услуги','Маршрут']};
 function setCats(){category.innerHTML=(cats[current]||[]).map(c=>`<option>${c}</option>`).join('')}setCats();loginForm.onsubmit=async e=>{e.preventDefault();try{await signInWithEmailAndPassword(auth,email.value,password.value)}catch(err){status.textContent='Ошибка: '+err.message}};logoutBtn.onclick=()=>signOut(auth);
 onAuthStateChanged(auth,u=>{if(u){loginBox.classList.add('hidden');adminBox.classList.remove('hidden');adminEmail.textContent=u.email;load()}else{loginBox.classList.remove('hidden');adminBox.classList.add('hidden')}});
