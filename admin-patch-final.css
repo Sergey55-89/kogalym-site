@@ -1,6 +1,6 @@
 /* admin-patch-final.css — только стили админки */
 
-.admin-wrap{max-width:1180px;margin:64px auto 90px;padding:0 20px;position:relative;z-index:2}
+.admin-wrap{max-width:1180px;margin:120px auto 90px;padding:0 20px;position:relative;z-index:2}
 .admin-page{color:#fff}
 .admin-hero{margin-bottom:34px;max-width:820px}
 .admin-eyebrow{display:block;margin:0 0 10px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:#fff}
