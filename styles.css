@@ -1,0 +1,100 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#06111f;
+  --deep:#020712;
+  --panel:rgba(7,22,42,.78);
+  --panel2:rgba(9,30,56,.88);
+  --blue:#1177ff;
+  --blue2:#67b8ff;
+  --gold:#d6a64d;
+  --cream:#f2dfb5;
+  --white:#f7fbff;
+  --text:#dbe8f8;
+  --muted:#95a9bf;
+  --line:rgba(114,178,255,.22);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(180deg,#06111f,#020712 68%);
+  color:var(--white);
+}
+a{text-decoration:none;color:inherit}
+.header{
+  position:absolute;top:0;left:0;width:100%;z-index:10;
+  height:88px;padding:0 42px;display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(180deg,rgba(2,7,18,.68),rgba(2,7,18,0));
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:900;letter-spacing:-.02em;font-size:22px;line-height:1.05;color:white}
+.brand img{width:68px;height:68px;border-radius:50%;object-fit:cover;filter:drop-shadow(0 8px 20px rgba(0,0,0,.35))}
+nav{display:flex;gap:30px;font-size:15px;font-weight:700}
+nav a{padding:29px 0 10px;border-bottom:2px solid transparent;color:#e8f1ff}
+nav a.active,nav a:hover{color:var(--cream);border-color:var(--gold)}
+.header-icons{display:flex;gap:18px;font-size:28px;color:#dbe8ff}
+.hero{
+  min-height:760px;padding:130px 56px 54px;position:relative;overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,720px) 340px;align-items:start;gap:60px;
+  background:
+    linear-gradient(90deg,rgba(6,17,31,.96) 0%,rgba(6,17,31,.68) 44%,rgba(6,17,31,.14) 100%),
+    linear-gradient(180deg,rgba(6,17,31,.10) 0%,rgba(6,17,31,.15) 62%,#06111f 100%),
+    url('hero-kogalym.jpg') center/cover no-repeat;
+}
+.hero-content{max-width:720px;margin-top:52px}
+h1{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(54px,6vw,92px);
+  line-height:.98;letter-spacing:-.045em;font-weight:500;text-transform:uppercase;
+  color:#f9fbff;text-shadow:0 12px 32px rgba(0,0,0,.45);
+}
+h1 span{color:var(--cream)}
+.hero p{margin-top:26px;max-width:560px;font-size:21px;line-height:1.58;color:#eef5ff}
+.actions{display:flex;gap:18px;margin-top:36px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;border-radius:12px;font-weight:800;border:1px solid var(--line);transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.primary{background:linear-gradient(135deg,#e3b55a,#b98327);color:#07111f;box-shadow:0 12px 34px rgba(214,166,77,.25)}
+.secondary{background:rgba(3,13,28,.45);color:#fff}
+.chips{display:flex;gap:0;margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;backdrop-filter:blur(10px);max-width:720px}
+.chips div{display:flex;align-items:center;gap:16px;padding:18px 24px;background:rgba(7,22,42,.55);border-right:1px solid var(--line)}
+.chips div:last-child{border-right:0}
+.chips b{font-size:34px;color:var(--gold)}
+.chips span{font-size:15px;line-height:1.35;color:#e9f3ff;font-weight:700}
+.weather-card{
+  margin-top:70px;padding:28px;border-radius:18px;background:rgba(8,25,52,.78);
+  border:1px solid rgba(149,190,255,.28);box-shadow:0 18px 60px rgba(0,0,0,.25);backdrop-filter:blur(15px)
+}
+.weather-main{display:grid;grid-template-columns:48px 80px 1fr;gap:14px;align-items:center}
+.cloud{font-size:40px}.weather-main strong{font-size:44px}.weather-main small{display:block;color:#c7d7ea;margin-top:6px}
+.weather-card p{margin:14px 0;color:#dcecff}.weather-card hr{border:0;border-top:1px solid var(--line);margin:18px 0}.weather-card span{color:#dcecff;line-height:1.6}
+.popular,.lower,.stats{padding-left:42px;padding-right:42px;max-width:1500px;margin:0 auto}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.section-title h2{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;font-weight:500;color:#fff
+}
+.section-title h2:before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:12px}
+.section-title a{color:var(--cream);font-weight:800}
+.place-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.place-grid article{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.14)}
+.place-grid img{width:100%;height:160px;object-fit:cover;display:block;filter:saturate(1.08) brightness(.88)}
+.place-grid h3{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:500;margin:18px 18px 8px}
+.place-grid p{color:#b9c7d8;margin:0 18px 20px;line-height:1.45}
+.lower{display:grid;grid-template-columns:1.1fr .9fr 1.05fr;gap:24px;margin-top:34px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 16px 46px rgba(0,0,0,.18)}
+.section-title.small h2{font-size:28px}.section-title.small h2:before{display:none}
+.event{display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:0}.event time{border-radius:12px;background:rgba(17,119,255,.10);color:var(--blue2);text-align:center;padding:12px 8px;font-weight:900}
+.event time small{display:block;font-size:12px;margin-top:6px}.event p{color:#afc0d4;margin-top:5px}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.quick-grid a{min-height:102px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--cream);font-size:30px}
+.quick-grid span{font-size:14px;color:#dbe7f7;font-weight:800}
+.city-card{background:linear-gradient(90deg,rgba(9,30,56,.94),rgba(9,30,56,.44)),url('lukoil-city.webp') right bottom/auto 100% no-repeat}
+.city-card h2{font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:500;max-width:310px}.city-card p{margin:18px 0 26px;line-height:1.7;max-width:330px;color:#dbe8f8}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:34px;margin-bottom:38px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(7,22,42,.62)}
+.stats div{text-align:center;padding:26px;border-right:1px solid var(--line)}.stats div:last-child{border-right:0}.stats b{font-family:Georgia,'Times New Roman',serif;font-size:34px;color:#fff;font-weight:500}.stats span{display:block;color:#aebdd0;margin-top:6px}
+footer{max-width:1500px;margin:0 auto;padding:26px 42px 44px;display:flex;gap:42px;color:#aebdd0}
+@media(max-width:1000px){
+  .header{position:relative;background:#06111f;height:auto;padding:16px;align-items:flex-start;flex-direction:column}
+  nav{flex-wrap:wrap;gap:15px}.hero{grid-template-columns:1fr;padding:48px 22px}.hero-content{margin-top:0}h1{font-size:44px}.weather-card{margin-top:0}.chips{display:grid}.chips div{border-right:0;border-bottom:1px solid var(--line)}
+  .popular,.lower,.stats{padding-left:16px;padding-right:16px}.place-grid,.lower,.stats{grid-template-columns:1fr}footer{padding:22px 16px;flex-wrap:wrap}
+}
