@@ -165,3 +165,28 @@ margin-left:auto;
   font-size:11px;
   line-height:1.1;
 }
+/* ===== FIX: одинаковое меню во всех шапках ===== */
+
+.header nav{
+  display:flex !important;
+  align-items:center !important;
+  gap:32px !important;
+  margin-left:auto !important;
+}
+
+.header nav a{
+  font-size:16px !important;
+  line-height:1 !important;
+  font-weight:800 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
+}
+
+.header nav a.active{
+  color:#ffd85a !important;
+}
+
+.header nav a.active::after{
+  bottom:-12px !important;
+}
