@@ -450,3 +450,47 @@ padding-top:140px !important;
   font-size:38px;
   color:#f2d05a;
 }
+#adsList .item{
+  display:grid;
+  grid-template-columns:120px 1fr 170px;
+  align-items:center;
+  gap:24px;
+}
+
+#adsList .thumb{
+  width:120px;
+  height:92px;
+  border-radius:18px;
+}
+
+#adsList h2{
+  font-size:24px;
+  line-height:1.1;
+  margin:0 0 10px;
+}
+
+#adsList p{
+  font-size:16px;
+  line-height:1.45;
+  margin:0 0 12px;
+}
+
+#adsList .meta{
+  font-size:13px;
+  opacity:.8;
+}
+
+#adsList .price{
+  text-align:right;
+}
+
+#adsList .price b{
+  display:block;
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+#adsList .price span{
+  font-size:14px;
+  opacity:.8;
+}
