@@ -14,7 +14,13 @@ nav a.active,nav a:hover{color:var(--gold2);border-color:var(--gold)}
 .weather{height:52px;min-width:190px;padding:8px 14px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:rgba(7,20,39,.82);display:grid;grid-template-columns:28px 50px 1fr;align-items:center;gap:8px}
 .weather b{font-size:27px}.weather small{font-size:12px;color:#e5eefb;line-height:1.25}
 
-.hero{min-height:650px;padding-top:94px;background:linear-gradient(90deg,rgba(2,8,20,.98) 0%,rgba(2,8,20,.72) 34%,rgba(2,8,20,.18) 100%),linear-gradient(180deg,rgba(2,8,20,.05) 0%,#020814 100%),url('images/hero.jpg') center/cover no-repeat}
+.hero{
+min-height:650px;
+padding-top:94px;
+background:
+linear-gradient(180deg, rgba(2,8,20,.78), #020814 52%),
+url("images/hero.jpg") center/cover fixed;
+}
 .hero-content{max-width:1500px;margin:0 auto;padding:62px 34px 0}
 .kicker{font-family:Georgia,'Times New Roman',serif;font-size:17px;color:#f0f3f8;margin-bottom:44px}
 h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;text-transform:uppercase;font-size:clamp(54px,5.4vw,82px);line-height:.98;letter-spacing:-.045em;text-shadow:0 10px 36px rgba(0,0,0,.5)}
