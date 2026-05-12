@@ -219,3 +219,30 @@ url("images/hero.jpg") center/cover fixed;;
   z-index:-1;
   pointer-events:none;
 }
+.page-shell{
+max-width:1500px;
+margin:0 auto;
+padding:140px 34px 80px;
+}
+
+.page-shell h1{
+font-size:56px;
+line-height:1;
+margin-bottom:18px;
+font-family:Georgia,"Times New Roman",serif;
+font-weight:700;
+color:#fff;
+}
+
+.page-shell p{
+font-size:18px;
+line-height:1.7;
+color:#d7e3f7;
+}
+
+.page-shell h2{
+font-size:34px;
+margin-bottom:18px;
+font-family:Georgia,"Times New Roman",serif;
+color:#f0d58a;
+}
