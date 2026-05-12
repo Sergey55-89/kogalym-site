@@ -319,3 +319,59 @@ margin:0 auto;
 padding:140px 34px 80px;
 box-sizing:border-box;
 }
+/* ===== ЖЕСТКОЕ ВЫРАВНИВАНИЕ ВСЕХ СТРАНИЦ ===== */
+
+.routes-page,
+.places-page,
+.events-page,
+.announcements-page,
+.page-shell{
+  max-width:1500px !important;
+  margin:0 auto !important;
+  padding:140px 34px 80px !important;
+  box-sizing:border-box !important;
+}
+
+.routes-page h1,
+.places-page h1,
+.events-page h1,
+.announcements-page h1{
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:72px !important;
+  line-height:.95 !important;
+  font-weight:700 !important;
+  letter-spacing:-.04em !important;
+  margin:0 0 22px !important;
+  color:#fff !important;
+}
+
+.routes-page p,
+.places-page p,
+.events-page p,
+.announcements-page p{
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:18px !important;
+  line-height:1.65 !important;
+  font-weight:600 !important;
+  color:#dbe6f8 !important;
+}
+
+.routes-page h2,
+.places-page h2,
+.events-page h2,
+.announcements-page h2{
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:42px !important;
+  line-height:1.05 !important;
+  font-weight:700 !important;
+  color:#fff !important;
+}
+
+.route-card,
+.week-place,
+.hero-event,
+.card,
+.event-card,
+.admin-card{
+  border-radius:24px !important;
+}
