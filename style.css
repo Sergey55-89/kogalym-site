@@ -487,3 +487,23 @@ font-weight:700 !important;
 
 color:#d7dcec !important;
 }
+#adsList .item{
+background:linear-gradient(180deg,#151b2b 0%,#0f1726 100%) !important;
+}
+
+#adsList h2{
+font-size:24px !important;
+}
+
+#adsList p{
+font-size:18px !important;
+font-weight:700 !important;
+}
+
+#adsList .meta{
+font-size:15px !important;
+}
+
+#adsList .price b{
+font-size:32px !important;
+}
