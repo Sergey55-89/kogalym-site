@@ -412,7 +412,7 @@ align-items:center !important;
 min-height:130px !important;
 padding:22px !important;
 border-radius:26px !important;
-background:rgba(31,38,55,.92) !important;
+background:linear-gradient(180deg,#1a2238 0%,#111827 100%)
 background-image:none !important;
 border:1px solid rgba(255,255,255,.08) !important;
 box-shadow:none !important;
@@ -427,12 +427,12 @@ background-position:center !important;
 }
 
 #adsList h2{
-font-size:28px !important;
+font-size:22px !important;
 line-height:1.1 !important;
 margin:0 0 8px !important;
 font-family:Georgia,"Times New Roman",serif !important;
 font-weight:700 !important;
-color:#fff !important;
+color:#f3f4f6 !important;
 }
 
 #adsList p{
@@ -455,9 +455,9 @@ text-align:right !important;
 
 #adsList .price b{
 display:block !important;
-font-size:38px !important;
+font-size:30px !important;
 line-height:1 !important;
-font-weight:900 !important;
+font-weight:800 !important;
 color:#ffe45c !important;
 }
 
