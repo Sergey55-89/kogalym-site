@@ -114,6 +114,19 @@ h1{font-family:Georgia,serif;font-size:82px;line-height:.92;font-weight:500;marg
 </section>
 </div></main>
 
+<div class="ad-modal" id="adModal">
+  <div class="ad-modal-box">
+    <button class="ad-close" id="adClose">×</button>
+    <div class="ad-modal-image" id="adModalImage"></div>
+    <div class="ad-modal-content">
+      <div class="ad-modal-category" id="adModalCategory"></div>
+      <h2 id="adModalTitle"></h2>
+      <p id="adModalDescription"></p>
+      <div class="ad-modal-price" id="adModalPrice"></div>
+    </div>
+  </div>
+</div>
+
 <script>
 const cats = document.querySelectorAll('.cat');
 const items = document.querySelectorAll('.item');
@@ -197,45 +210,34 @@ const adModalDescription = document.getElementById('adModalDescription');
 const adModalPrice = document.getElementById('adModalPrice');
 const adModalCategory = document.getElementById('adModalCategory');
 
-document.addEventListener('click',e=>{
-  const card=e.target.closest('.item');
-  if(!card) return;
+document.addEventListener('click', e => {
+  const card = e.target.closest('.item');
+  if (!card || !adModal) return;
 
-  const thumb=card.querySelector('.thumb');
-  adModalImage.style.backgroundImage=thumb.style.backgroundImage;
-  adModalTitle.textContent=card.querySelector('h2')?.textContent || '';
-  adModalDescription.textContent=card.querySelector('p')?.textContent || '';
-  adModalPrice.textContent=card.querySelector('.price b')?.textContent || '';
-  adModalCategory.textContent=card.querySelector('.meta')?.textContent || '';
+  const thumb = card.querySelector('.thumb');
+  const meta = card.querySelector('.item-meta') || card.querySelector('.meta');
+
+  adModalImage.style.backgroundImage = thumb ? thumb.style.backgroundImage : '';
+  adModalTitle.textContent = card.querySelector('h2')?.textContent || '';
+  adModalDescription.textContent = card.querySelector('p')?.textContent || '';
+  adModalPrice.textContent = card.querySelector('.price b')?.textContent || '';
+  adModalCategory.textContent = meta?.textContent?.trim() || 'Объявление';
 
   adModal.classList.add('show');
 });
 
-adClose.addEventListener('click',()=>{
+adClose?.addEventListener('click', () => {
   adModal.classList.remove('show');
 });
 
-adModal.addEventListener('click',e=>{
-  if(e.target===adModal){
+adModal?.addEventListener('click', e => {
+  if (e.target === adModal) {
     adModal.classList.remove('show');
   }
 });
 
 </script>
 
-
-<div class="ad-modal" id="adModal">
-  <div class="ad-modal-box">
-    <button class="ad-close" id="adClose">×</button>
-    <div class="ad-modal-image" id="adModalImage"></div>
-    <div class="ad-modal-content">
-      <div class="ad-modal-category" id="adModalCategory"></div>
-      <h2 id="adModalTitle"></h2>
-      <p id="adModalDescription"></p>
-      <div class="ad-modal-price" id="adModalPrice"></div>
-    </div>
-  </div>
-</div>
 
 </body>
 </html>
