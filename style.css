@@ -398,112 +398,102 @@ font-family:Arial,Helvetica,sans-serif !important;
 padding-top:140px !important;
 }
 /* FIX карточек из админки */
+
 #adsList .item{
-display:grid !important;
-grid-template-columns:95px 1fr 140px !important;
-gap:20px !important;
+    display:grid !important;
+    grid-template-columns:95px 1fr 140px !important;
+    gap:20px !important;
 
-align-items:center !important;
+    align-items:center !important;
 
-padding:20px !important;
-min-height:120px !important;
+    padding:20px !important;
+    min-height:120px !important;
 
-border-radius:28px !important;
+    border-radius:28px !important;
 
-background:linear-gradient(180deg,#182131 0%,#101827 100%) !important;
+    background:linear-gradient(180deg,#1b2436 0%,#131c2d 100%) !important;
 
-border:1px solid rgba(255,255,255,.08) !important;
+    border:1px solid rgba(255,255,255,.08) !important;
 
-box-shadow:none !important;
-opacity:1 !important;
+    box-shadow:none !important;
 
-overflow:hidden !important;
+    opacity:1 !important;
 }
 
 #adsList .thumb{
-width:95px !important;
-height:78px !important;
+    width:95px !important;
+    height:78px !important;
 
-border-radius:18px !important;
+    border-radius:18px !important;
 
-background-size:cover !important;
-background-position:center !important;
+    background-size:cover !important;
+    background-position:center !important;
+}
+
+#adsList .item > div:nth-child(2){
+    min-height:72px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
 }
 
 #adsList h2{
-font-size:21px !important;
+    font-size:21px !important;
 
-font-family:Georgia,"Times New Roman",serif !important;
+    font-family:Georgia,"Times New Roman",serif !important;
 
-font-weight:700 !important;
+    font-weight:700 !important;
 
-line-height:1.1 !important;
+    line-height:1.1 !important;
 
-margin:0 0 8px !important;
+    margin:0 0 8px !important;
 
-color:#f4f6fb !important;
+    min-height:46px !important;
+
+    color:#f4f6fb !important;
 }
 
 #adsList p{
-font-size:16px !important;
+    font-size:16px !important;
 
-font-weight:600 !important;
+    font-weight:600 !important;
 
-line-height:1.35 !important;
+    line-height:1.35 !important;
 
-margin:0 0 8px !important;
+    margin:0 0 8px !important;
 
-color:#e7e7e7 !important;
+    color:#e7e7e7 !important;
 }
 
 #adsList .meta{
-font-size:14px !important;
+    font-size:14px !important;
 
-font-weight:700 !important;
+    font-weight:700 !important;
 
-color:#d7dcec !important;
+    color:#d7dcec !important;
 }
 
 #adsList .price{
-text-align:right !important;
+    text-align:right !important;
 }
 
 #adsList .price b{
-display:block !important;
+    display:block !important;
 
-font-size:28px !important;
+    font-size:28px !important;
 
-font-weight:800 !important;
+    font-weight:800 !important;
 
-line-height:1 !important;
+    line-height:1 !important;
 
-color:#ffe45c !important;
+    color:#ffe45c !important;
 }
 
 #adsList .price span{
-font-size:13px !important;
+    font-size:13px !important;
 
-font-weight:700 !important;
+    font-weight:700 !important;
 
-color:#d7dcec !important;
-}
-#adsList .item{
-background:linear-gradient(180deg,#151b2b 0%,#0f1726 100%) !important;
-}
-
-#adsList h2{
-font-size:24px !important;
-}
-
-#adsList p{
-font-size:18px !important;
-font-weight:700 !important;
-}
-
-#adsList .meta{
-font-size:15px !important;
-}
-
-#adsList .price b{
-font-size:32px !important;
+    color:#d7dcec !important;
 }
