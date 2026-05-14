@@ -1116,3 +1116,101 @@ header,
     flex-direction:column;
   }
 }
+
+
+/* ===== VIP + PHONE FIX ===== */
+
+.vip-badge{
+position:absolute;
+top:14px;
+left:14px;
+z-index:5;
+padding:8px 14px;
+border-radius:999px;
+background:linear-gradient(180deg,#ffe066,#ffc107);
+color:#111827;
+font-size:12px;
+font-weight:900;
+box-shadow:0 10px 24px rgba(255,193,7,.30);
+}
+
+.ad-card.vip,
+.announcement-card.vip,
+.ann-card.vip{
+border:1px solid rgba(255,213,74,.42)!important;
+box-shadow:
+0 0 0 1px rgba(255,213,74,.18),
+0 18px 46px rgba(255,193,7,.12),
+0 18px 44px rgba(0,0,0,.26);
+}
+
+.phone-revealed{
+letter-spacing:.3px;
+}
+
+
+
+/* ===== VIP + PHONE FINAL POLISH ===== */
+
+.vip-phone-admin-fields{
+  display:grid;
+  gap:14px;
+  margin-top:18px;
+}
+
+.vip-phone-label{
+  display:grid;
+  gap:8px;
+  color:#fff;
+  font-weight:800;
+}
+
+.vip-phone-label input{
+  height:52px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  padding:0 16px;
+  font-size:15px;
+  outline:none;
+}
+
+.vip-phone-label input::placeholder{
+  color:rgba(255,255,255,.52);
+}
+
+.vip-checkbox-label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  font-weight:900;
+  padding:14px 16px;
+  border-radius:14px;
+  background:rgba(255,213,74,.10);
+  border:1px solid rgba(255,213,74,.24);
+}
+
+.vip-checkbox-label input{
+  width:18px;
+  height:18px;
+}
+
+.show-phone-btn,
+.phone-btn,
+.ad-phone-btn{
+  width:100%;
+  min-height:52px;
+  margin-top:16px;
+  border-radius:14px;
+  border:0;
+  background:linear-gradient(180deg,#ffe066,#ffc107);
+  color:#111827;
+  font-weight:900;
+  font-size:16px;
+}
+
+.phone-revealed{
+  font-weight:950;
+}
