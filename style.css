@@ -449,3 +449,200 @@ body.modal-open{overflow:hidden}
 .ad-modal-phone{width:100%;min-height:58px;border:0;border-radius:12px;background:linear-gradient(180deg,#ffe066 0%,#ffc107 100%);color:#141414;font-size:20px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(255,193,7,.22)}.ad-modal-phone:hover{filter:brightness(1.04)}
 @media(max-width:1100px){.ann-board,.ann-search-panel{grid-template-columns:1fr}.ann-categories{grid-template-columns:1fr 1fr}.ann-item{grid-template-columns:1fr}.ann-price{text-align:left;padding-top:0}.ann-top{display:block}.ann-add-btn{margin-top:22px}.ann-top h1{font-size:52px}}
 @media(max-width:768px){.ann-page{padding:38px 12px 48px}.ann-top h1{font-size:42px}.ann-categories{grid-template-columns:1fr}.ann-item{padding:16px}.ann-thumb{width:100%;height:190px}.ad-modal{padding:12px;align-items:flex-start;overflow-y:auto}.ad-modal-box{width:100%;max-height:none;border-radius:18px}.ad-modal-image{height:220px}.ad-modal-content{max-height:none;padding:22px 18px}.ad-modal-content h2{font-size:28px}.ad-modal-content p{font-size:16px}.ad-modal-info{grid-template-columns:1fr 1fr;gap:18px}.ad-modal-info div{padding:0;border-right:0}}
+
+
+/* ===== ADS UI UPGRADE ===== */
+
+#adsList{
+display:grid !important;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:22px !important;
+margin-top:28px !important;
+}
+
+.ad-card,
+.announcement-card,
+.ann-card{
+position:relative;
+overflow:hidden;
+border-radius:22px;
+background:rgba(15,23,42,.78);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
+transition:.25s ease;
+box-shadow:0 10px 28px rgba(0,0,0,.24);
+}
+
+.ad-card:hover,
+.announcement-card:hover,
+.ann-card:hover{
+transform:translateY(-6px);
+border-color:rgba(255,255,255,.16);
+}
+
+.ad-card img,
+.announcement-card img,
+.ann-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+}
+
+.ad-card-content,
+.announcement-card-content,
+.ann-card-body{
+padding:20px;
+}
+
+.ad-card h3,
+.announcement-card h3,
+.ann-card h3{
+font-size:26px;
+line-height:1.1;
+margin-bottom:12px;
+font-weight:800;
+color:#fff;
+word-break:break-word;
+}
+
+.ad-card p,
+.announcement-card p,
+.ann-card p{
+font-size:16px;
+line-height:1.6;
+color:rgba(255,255,255,.78);
+margin-bottom:16px;
+overflow-wrap:anywhere;
+}
+
+.ad-price,
+.price{
+font-size:28px !important;
+font-weight:900 !important;
+color:#ffd54a !important;
+}
+
+.vip-badge,
+.top-badge{
+position:absolute;
+top:14px;
+left:14px;
+padding:8px 14px;
+border-radius:999px;
+background:linear-gradient(180deg,#ffd54a,#ffbf00);
+color:#111827;
+font-size:13px;
+font-weight:900;
+z-index:5;
+box-shadow:0 8px 18px rgba(255,191,0,.28);
+}
+
+.show-phone-btn{
+width:100%;
+height:54px;
+border-radius:14px;
+background:linear-gradient(180deg,#ffd54a,#ffbf00);
+color:#111827;
+font-size:17px;
+font-weight:800;
+border:none;
+margin-top:18px;
+}
+
+.show-phone-btn:hover{
+filter:brightness(1.04);
+}
+
+@media(max-width:768px){
+
+#adsList{
+grid-template-columns:1fr !important;
+gap:18px !important;
+}
+
+.ad-card img,
+.announcement-card img,
+.ann-card img{
+height:220px;
+}
+
+.ad-card h3,
+.announcement-card h3,
+.ann-card h3{
+font-size:22px;
+}
+
+}
+
+
+
+/* ===== GLOBAL UNIFIED BACKGROUND / FINAL ===== */
+
+:root{
+  --site-bg:
+    linear-gradient(
+      180deg,
+      rgba(7,17,29,.72),
+      rgba(7,17,29,.82)
+    ),
+    url('images/hero.jpg') center/cover fixed;
+}
+
+html,
+body{
+  min-height:100%;
+  background:var(--site-bg) !important;
+  color:#fff;
+}
+
+/* Force the same background on all main page wrappers */
+main,
+.page,
+.page-shell,
+.wrapper,
+.site-wrapper,
+.home-page,
+.index-page,
+.ann-page,
+.announcements-page,
+.ads-page,
+.services-page,
+.jobs-page,
+.news-page,
+.contacts-page,
+.admin-page,
+.profile-page{
+  background:var(--site-bg) !important;
+  color:#fff;
+}
+
+/* Sections should not create a darker/other page background */
+section,
+.hero,
+.content,
+.main-content,
+.ann-container,
+.container{
+  background-color:transparent !important;
+}
+
+/* Keep cards/panels visible on the unified background */
+.card,
+.ad-card,
+.announcement-card,
+.ann-card,
+.panel,
+.box,
+.service-card,
+.news-card{
+  background:rgba(15,23,42,.78);
+}
+
+/* Header same tone on every page */
+header,
+.header,
+.site-header{
+  background:rgba(7,17,29,.82) !important;
+  backdrop-filter:blur(12px);
+}
