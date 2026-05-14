@@ -646,3 +646,347 @@ header,
   background:rgba(7,17,29,.82) !important;
   backdrop-filter:blur(12px);
 }
+
+
+
+/* ===== ANNOUNCEMENTS STAGE 2 / POLISHED MARKETPLACE ===== */
+
+.ann-page{
+  padding-top:140px !important;
+}
+
+.ann-hero,
+.ann-header,
+.ann-page-head{
+  max-width:1180px;
+  margin:0 auto 28px;
+  padding:0 20px;
+}
+
+.ann-hero h1,
+.ann-header h1,
+.ann-page-head h1{
+  font-size:clamp(34px,5vw,62px);
+  line-height:1;
+  letter-spacing:-.04em;
+  margin-bottom:14px;
+}
+
+.ann-hero p,
+.ann-header p,
+.ann-page-head p{
+  max-width:760px;
+  color:rgba(255,255,255,.78);
+  font-size:18px;
+}
+
+.ann-toolbar,
+.ads-toolbar,
+.filters,
+.filter-bar,
+.search-filters{
+  max-width:1180px;
+  margin:0 auto 26px !important;
+  padding:16px !important;
+  display:flex !important;
+  align-items:center;
+  gap:12px !important;
+  flex-wrap:wrap;
+  background:rgba(15,23,42,.72);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:22px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 12px 34px rgba(0,0,0,.22);
+}
+
+.ann-toolbar input,
+.ads-toolbar input,
+.filters input,
+.filter-bar input,
+.search-filters input,
+.ann-toolbar select,
+.ads-toolbar select,
+.filters select,
+.filter-bar select,
+.search-filters select{
+  height:48px;
+  min-width:210px;
+  flex:1;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  padding:0 15px;
+  outline:none;
+  font-size:15px;
+}
+
+.ann-toolbar input::placeholder,
+.ads-toolbar input::placeholder,
+.filters input::placeholder,
+.filter-bar input::placeholder,
+.search-filters input::placeholder{
+  color:rgba(255,255,255,.55);
+}
+
+.ann-toolbar button,
+.ads-toolbar button,
+.filters button,
+.filter-bar button,
+.search-filters button{
+  height:48px;
+  padding:0 18px;
+  border-radius:14px;
+  font-weight:800;
+  color:#111827;
+  background:linear-gradient(180deg,#ffe066,#ffc107);
+  border:0;
+}
+
+#adsList,
+.ads-list,
+.announcements-list{
+  width:min(1180px,calc(100% - 40px));
+  margin:28px auto 0 !important;
+  display:grid !important;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:22px !important;
+}
+
+.ad-card,
+.announcement-card,
+.ann-card{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  isolation:isolate;
+  border-radius:24px !important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.04)) !important;
+  border:1px solid rgba(255,255,255,.10) !important;
+  overflow:hidden;
+  box-shadow:0 18px 44px rgba(0,0,0,.25);
+}
+
+.ad-card:hover,
+.announcement-card:hover,
+.ann-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 22px 54px rgba(0,0,0,.34);
+  border-color:rgba(255,255,255,.18) !important;
+}
+
+.ad-card img,
+.announcement-card img,
+.ann-card img,
+.ad-image img{
+  width:100% !important;
+  height:230px !important;
+  object-fit:cover !important;
+  display:block;
+  background:#111827;
+}
+
+.ad-card-content,
+.announcement-card-content,
+.ann-card-body,
+.ad-content{
+  padding:20px !important;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.ad-category,
+.ann-category,
+.category-badge{
+  width:fit-content;
+  margin-bottom:12px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(37,99,235,.92);
+  color:#fff;
+  font-size:12px;
+  line-height:1;
+  font-weight:900;
+}
+
+.ad-card h3,
+.announcement-card h3,
+.ann-card h3,
+.ad-title{
+  margin:0 0 10px !important;
+  font-size:23px !important;
+  line-height:1.12 !important;
+  font-weight:900 !important;
+  color:#fff !important;
+  overflow-wrap:anywhere;
+}
+
+.ad-card p,
+.announcement-card p,
+.ann-card p,
+.ad-description{
+  margin:0 0 16px !important;
+  color:rgba(255,255,255,.76) !important;
+  font-size:15.5px !important;
+  line-height:1.55 !important;
+  overflow-wrap:anywhere;
+}
+
+.ad-meta,
+.ann-meta,
+.card-meta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:auto;
+  color:rgba(255,255,255,.68);
+  font-size:14px;
+}
+
+.ad-price,
+.price{
+  display:block;
+  margin:4px 0 12px;
+  font-size:26px !important;
+  line-height:1 !important;
+  color:#ffd54a !important;
+  font-weight:950 !important;
+}
+
+.vip-badge,
+.top-badge,
+.ad-vip{
+  position:absolute;
+  top:14px;
+  left:14px;
+  z-index:5;
+  padding:8px 13px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#ffe066,#ffc107);
+  color:#111827;
+  font-size:12px;
+  font-weight:950;
+  box-shadow:0 10px 24px rgba(255,193,7,.28);
+}
+
+.ad-card.vip,
+.announcement-card.vip,
+.ann-card.vip{
+  border-color:rgba(255,213,74,.42) !important;
+  box-shadow:0 20px 56px rgba(255,193,7,.10),0 18px 44px rgba(0,0,0,.28);
+}
+
+.show-phone-btn,
+.ad-phone-btn,
+.phone-btn{
+  width:100%;
+  min-height:52px;
+  margin-top:18px;
+  border:0;
+  border-radius:15px;
+  background:linear-gradient(180deg,#ffe066,#ffc107);
+  color:#111827;
+  font-size:16px;
+  font-weight:900;
+}
+
+.empty-state,
+.no-ads{
+  width:min(760px,calc(100% - 40px));
+  margin:46px auto;
+  padding:36px 24px;
+  text-align:center;
+  border-radius:24px;
+  background:rgba(15,23,42,.72);
+  border:1px solid rgba(255,255,255,.10);
+  color:rgba(255,255,255,.76);
+}
+
+/* Modal polish */
+.modal,
+.ad-modal,
+.vip-modal{
+  backdrop-filter:blur(8px);
+}
+
+.modal-content,
+.ad-modal-content,
+.vip-modal-content{
+  border-radius:26px !important;
+  background:linear-gradient(180deg,#111c2d,#08111f) !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  box-shadow:0 32px 90px rgba(0,0,0,.62) !important;
+}
+
+.modal-title,
+.ad-modal-title,
+.vip-modal-title{
+  overflow-wrap:anywhere;
+}
+
+.modal-description,
+.ad-modal-description,
+.vip-modal-description{
+  overflow-wrap:anywhere;
+  color:rgba(255,255,255,.78);
+}
+
+@media(max-width:768px){
+  .ann-page{
+    padding:110px 0 70px !important;
+  }
+
+  .ann-toolbar,
+  .ads-toolbar,
+  .filters,
+  .filter-bar,
+  .search-filters{
+    width:calc(100% - 24px);
+    border-radius:18px;
+    padding:12px !important;
+  }
+
+  .ann-toolbar input,
+  .ads-toolbar input,
+  .filters input,
+  .filter-bar input,
+  .search-filters input,
+  .ann-toolbar select,
+  .ads-toolbar select,
+  .filters select,
+  .filter-bar select,
+  .search-filters select,
+  .ann-toolbar button,
+  .ads-toolbar button,
+  .filters button,
+  .filter-bar button,
+  .search-filters button{
+    width:100%;
+    min-width:0;
+    flex-basis:100%;
+  }
+
+  #adsList,
+  .ads-list,
+  .announcements-list{
+    width:calc(100% - 24px);
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  .ad-card img,
+  .announcement-card img,
+  .ann-card img,
+  .ad-image img{
+    height:210px !important;
+  }
+
+  .ad-card h3,
+  .announcement-card h3,
+  .ann-card h3,
+  .ad-title{
+    font-size:21px !important;
+  }
+}
