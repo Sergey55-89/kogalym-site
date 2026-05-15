@@ -1770,3 +1770,149 @@ section,
     min-height:auto;
   }
 }
+
+
+
+/* ===== PLACES COMPACT FINAL FIX ===== */
+
+/* Убираем эффект огромных карточек и делаем сетку ровной */
+.places-grid{
+  width:min(1240px,100%) !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:18px !important;
+  align-items:stretch !important;
+}
+
+.place-card{
+  display:flex !important;
+  flex-direction:column !important;
+  min-height:0 !important;
+  height:100% !important;
+  max-height:none !important;
+  border-radius:22px !important;
+  overflow:hidden !important;
+}
+
+/* Фото компактное, одинаковое, без пустых огромных зон */
+.place-image{
+  flex:0 0 165px !important;
+  height:165px !important;
+  min-height:165px !important;
+  max-height:165px !important;
+  background-size:cover !important;
+  background-position:center !important;
+}
+
+.place-body{
+  display:flex !important;
+  flex-direction:column !important;
+  flex:1 1 auto !important;
+  padding:18px !important;
+  min-height:0 !important;
+}
+
+/* Заголовок больше не вылезает и не становится гигантским */
+.place-body h2{
+  display:-webkit-box !important;
+  -webkit-line-clamp:2 !important;
+  -webkit-box-orient:vertical !important;
+  overflow:hidden !important;
+  min-height:54px !important;
+  max-height:64px !important;
+  margin:10px 0 8px !important;
+  font-size:30px !important;
+  line-height:1.02 !important;
+  letter-spacing:-.5px !important;
+  word-break:normal !important;
+  overflow-wrap:break-word !important;
+}
+
+/* Описание не прячется за карточку */
+.place-body p{
+  display:-webkit-box !important;
+  -webkit-line-clamp:3 !important;
+  -webkit-box-orient:vertical !important;
+  overflow:hidden !important;
+  min-height:72px !important;
+  max-height:78px !important;
+  margin:0 !important;
+  font-size:16px !important;
+  line-height:1.5 !important;
+  word-break:normal !important;
+  overflow-wrap:break-word !important;
+}
+
+.place-top{
+  min-height:24px !important;
+}
+
+.place-meta{
+  min-height:38px !important;
+  margin-top:14px !important;
+  gap:8px !important;
+}
+
+.place-meta span{
+  white-space:nowrap !important;
+  font-size:13px !important;
+  padding:7px 10px !important;
+}
+
+.place-more{
+  margin-top:auto !important;
+  min-height:44px !important;
+  border-radius:13px !important;
+}
+
+/* Кастомный список не должен закрывать пол-экрана */
+.custom-select{
+  z-index:2000 !important;
+}
+
+.custom-select-menu{
+  top:58px !important;
+  max-height:260px !important;
+  overflow:auto !important;
+  background:#0b1422 !important;
+}
+
+.custom-select-menu button{
+  color:#fff !important;
+  background:#0b1422 !important;
+}
+
+.custom-select-menu button:hover{
+  color:#08111f !important;
+  background:linear-gradient(135deg,#f2d08a,#d6a24b) !important;
+}
+
+/* Средние экраны: 2 карточки */
+@media(max-width:1150px){
+  .places-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+/* Малые экраны: 1 карточка */
+@media(max-width:700px){
+  .places-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .place-image{
+    flex-basis:200px !important;
+    height:200px !important;
+    min-height:200px !important;
+    max-height:200px !important;
+  }
+
+  .place-body h2{
+    font-size:28px !important;
+    min-height:auto !important;
+  }
+
+  .place-body p{
+    min-height:auto !important;
+  }
+}
