@@ -1153,3 +1153,200 @@ section,
 .ann-item{
   background-color:transparent;
 }
+
+
+
+/* ===== PREMIUM CARDS UPGRADE ===== */
+
+.ann-list,
+.cards-grid,
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:24px;
+}
+
+.ann-item,
+.card,
+.place-card,
+.listing-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.ann-thumb,
+.card-image,
+.place-thumb{
+  position:relative;
+  min-height:240px;
+}
+
+.ann-thumb::before,
+.card-image::before,
+.place-thumb::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to top, rgba(2,8,20,.92) 0%, rgba(2,8,20,.12) 55%, transparent 100%);
+  z-index:1;
+}
+
+.ann-thumb::after,
+.card-image::after,
+.place-thumb::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(242,208,138,.12), transparent 44%);
+  z-index:2;
+}
+
+.ann-item-body,
+.card-body{
+  position:relative;
+  z-index:3;
+}
+
+.ann-item h2,
+.card h2,
+.card h3{
+  font-size:24px;
+  line-height:1.1;
+  letter-spacing:-.5px;
+}
+
+.ann-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+
+.ann-meta span{
+  display:inline-flex;
+  align-items:center;
+  min-height:32px;
+  padding:0 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  color:#dbe6f8;
+  font-size:13px;
+  font-weight:800;
+}
+
+.ann-price{
+  border-top:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+}
+
+.ann-price b{
+  font-size:28px;
+  letter-spacing:-1px;
+  color:#fff;
+}
+
+.ann-item:hover,
+.card:hover{
+  transform:translateY(-10px) scale(1.01);
+  box-shadow:
+    0 40px 90px rgba(0,0,0,.42),
+    0 0 0 1px rgba(242,208,138,.12);
+}
+
+.vip-badge{
+  z-index:20;
+}
+
+.top-badge,
+.popular-badge,
+.new-badge{
+  position:absolute;
+  top:16px;
+  right:16px;
+  z-index:20;
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:0 14px;
+  border-radius:999px;
+  background:rgba(7,17,29,.78);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+}
+
+.skeleton{
+  position:relative;
+  overflow:hidden;
+  background:rgba(255,255,255,.05);
+}
+
+.skeleton::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  transform:translateX(-100%);
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
+  animation:skeletonMove 1.4s infinite;
+}
+
+@keyframes skeletonMove{
+  100%{
+    transform:translateX(100%);
+  }
+}
+
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp .7s ease forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:768px){
+
+  .ann-list,
+  .cards-grid,
+  .grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .ann-item,
+  .card{
+    border-radius:22px;
+  }
+
+  .ann-thumb,
+  .card-image{
+    min-height:220px;
+  }
+
+  .ann-item h2,
+  .card h2,
+  .card h3{
+    font-size:22px;
+  }
+
+  .ann-price b{
+    font-size:24px;
+  }
+}
