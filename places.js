@@ -18,6 +18,11 @@
   const rating = document.getElementById('placeModalRating');
   const modalType = document.getElementById('placeModalType');
   const hours = document.getElementById('placeModalHours');
+  const address = document.getElementById('placeModalAddress');
+  const phone = document.getElementById('placeModalPhone');
+  const mapTitle = document.getElementById('placeModalMapTitle');
+  const routeBtn = document.getElementById('placeRouteBtn');
+  const mapBtn = document.getElementById('placeMapBtn');
   const favorite = document.getElementById('placeFavoriteBtn');
 
   let currentType = 'all';
@@ -32,6 +37,10 @@
     return Array.from(grid.querySelectorAll('.place-card'));
   }
 
+  function makeMapUrl(query){
+    return 'https://yandex.ru/maps/?text=' + encodeURIComponent(query || 'Когалым');
+  }
+
   function applyFilter(){
     const q = norm(search ? search.value : '');
     let visible = 0;
@@ -40,6 +49,8 @@
       const text = norm([
         card.dataset.placeTitle,
         card.dataset.placeDescription,
+        card.dataset.placeAddress,
+        card.dataset.placePhone,
         card.textContent
       ].join(' '));
 
@@ -73,14 +84,26 @@
   function openPlace(card){
     if(!modal || !card) return;
 
+    const placeTitle = card.dataset.placeTitle || '';
+    const placeAddress = card.dataset.placeAddress || 'Когалым';
+    const placePhone = card.dataset.placePhone || 'Телефон не указан';
+    const mapQuery = card.dataset.placeMap || placeAddress || placeTitle || 'Когалым';
+    const url = makeMapUrl(mapQuery);
+
     image.style.backgroundImage = `url('${card.dataset.placeImage || 'images/galaktika.jpg'}')`;
-    title.textContent = card.dataset.placeTitle || '';
+    title.textContent = placeTitle;
     description.textContent = card.dataset.placeDescription || '';
     rating.textContent = '★ ' + (card.dataset.placeRating || '4.5');
     modalType.textContent = card.querySelector('.place-top span')?.textContent || 'Место';
     hours.textContent = card.dataset.placeHours || 'Уточняется';
+    address.textContent = placeAddress;
+    phone.textContent = placePhone;
+    mapTitle.textContent = placeAddress;
 
-    const favKey = 'place_fav_' + norm(card.dataset.placeTitle).replace(/\s+/g, '_');
+    if(routeBtn) routeBtn.href = url;
+    if(mapBtn) mapBtn.href = url;
+
+    const favKey = 'place_fav_' + norm(placeTitle).replace(/\s+/g, '_');
     const isFav = localStorage.getItem(favKey) === '1';
 
     favorite.textContent = isFav ? '★ В избранном' : '♡ В избранное';

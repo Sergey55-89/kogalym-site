@@ -1989,3 +1989,148 @@ section,
 .ad-modal-card{
   overflow:auto !important;
 }
+
+
+
+/* ===== PLACES MAP ROUTE + PERFECT ALIGN ===== */
+
+/* Ровная сетка и одинаковые карточки */
+.places-grid{
+  align-items:stretch !important;
+}
+
+.place-card{
+  display:flex !important;
+  flex-direction:column !important;
+  height:520px !important;
+  min-height:520px !important;
+  max-height:520px !important;
+  overflow:hidden !important;
+}
+
+.place-image{
+  flex:0 0 170px !important;
+  height:170px !important;
+  min-height:170px !important;
+  max-height:170px !important;
+  background-size:cover !important;
+  background-position:center !important;
+}
+
+.place-body{
+  display:flex !important;
+  flex-direction:column !important;
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  padding:18px !important;
+}
+
+.place-body h2{
+  display:-webkit-box !important;
+  -webkit-line-clamp:2 !important;
+  -webkit-box-orient:vertical !important;
+  overflow:hidden !important;
+  min-height:60px !important;
+  max-height:68px !important;
+  font-size:30px !important;
+  line-height:1.05 !important;
+}
+
+.place-body p{
+  display:-webkit-box !important;
+  -webkit-line-clamp:3 !important;
+  -webkit-box-orient:vertical !important;
+  overflow:hidden !important;
+  min-height:74px !important;
+  max-height:82px !important;
+}
+
+.place-meta{
+  min-height:42px !important;
+}
+
+.place-more{
+  margin-top:auto !important;
+}
+
+/* Карта в открытой карточке места */
+.place-modal-map{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  min-height:112px;
+  margin:20px 0;
+  padding:18px;
+  border-radius:18px;
+  background:
+    linear-gradient(135deg, rgba(242,208,138,.13), rgba(255,255,255,.04)),
+    url("images/embankment.jpg") center/cover;
+  border:1px solid rgba(242,208,138,.22);
+  overflow:hidden;
+  position:relative;
+}
+
+.place-modal-map::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(7,17,29,.58);
+  pointer-events:none;
+}
+
+.place-modal-map > *{
+  position:relative;
+  z-index:2;
+}
+
+.place-modal-map__pin{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#f2d08a,#d6a24b);
+  color:#08111f;
+  font-size:26px;
+  font-weight:950;
+  flex:0 0 auto;
+}
+
+.place-modal-map span{
+  color:#f2d08a;
+  font-weight:950;
+  font-size:13px;
+}
+
+.place-modal-map strong{
+  display:block;
+  margin:4px 0;
+  color:#fff;
+  font-size:20px;
+}
+
+.place-modal-map p{
+  margin:0;
+  color:#dbe6f8;
+  font-size:14px;
+  line-height:1.35;
+}
+
+.place-modal-actions{
+  grid-template-columns:1fr 1fr 1fr !important;
+}
+
+@media(max-width:900px){
+  .place-modal-actions{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:700px){
+  .place-card{
+    height:auto !important;
+    min-height:auto !important;
+    max-height:none !important;
+  }
+}
