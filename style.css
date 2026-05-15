@@ -1094,3 +1094,62 @@ footer,
   background:rgba(7,17,29,.72)!important;
   backdrop-filter:blur(14px);
 }
+
+
+
+/* ===== GLOBAL BACKGROUND SAME AS ANNOUNCEMENTS ===== */
+html,
+body{
+  background:
+    linear-gradient(180deg, rgba(2,8,20,.22) 0%, rgba(2,8,20,.48) 100%),
+    url("images/hero.jpg") center/cover fixed !important;
+  background-color:#020814 !important;
+}
+
+.hero,
+.admin-page,
+.admin-wrap,
+.ann-page,
+main,
+.page,
+.page-bg{
+  background:
+    linear-gradient(180deg, rgba(2,8,20,.22) 0%, rgba(2,8,20,.48) 100%),
+    url("images/hero.jpg") center/cover fixed !important;
+}
+
+.hero{
+  border-radius:0 !important;
+  box-shadow:none !important;
+  border:0 !important;
+}
+
+.page-bg{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+}
+
+.hero::before,
+.admin-page::before,
+.admin-wrap::before,
+.ann-page::before,
+.page-bg::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at top right, rgba(242,208,138,.08), transparent 32%);
+}
+
+section,
+.container,
+.ann-container,
+.admin-grid,
+.admin-card,
+.ann-board,
+.ann-side,
+.ann-item{
+  background-color:transparent;
+}
