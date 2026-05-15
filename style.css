@@ -1051,3 +1051,46 @@ footer,
 .submit-contact-modal__close:active{
   transform:scale(.92);
 }
+
+
+
+/* ===== HERO BACKGROUND RESTORE FINAL ===== */
+.hero{
+  background:
+    linear-gradient(90deg, rgba(2,8,20,.92) 0%, rgba(2,8,20,.68) 35%, rgba(2,8,20,.22) 100%),
+    linear-gradient(180deg, rgba(2,8,20,.04) 0%, #020814 100%),
+    url("images/hero.jpg") center/cover fixed !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  border:0 !important;
+}
+
+.hero::before,
+.hero-section::before,
+.main-hero::before{
+  display:none !important;
+}
+
+
+
+/* ===== ANNOUNCEMENTS BACKGROUND MATCH ===== */
+.ann-page{
+  background:
+    linear-gradient(180deg, rgba(2,8,20,.22) 0%, rgba(2,8,20,.48) 100%),
+    url("images/hero.jpg") center/cover fixed !important;
+}
+
+.ann-page::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at top right, rgba(242,208,138,.08), transparent 32%);
+}
+
+.ann-page .ann-board,
+.ann-page .ann-sidebar,
+.ann-page .ann-item{
+  background:rgba(7,17,29,.72)!important;
+  backdrop-filter:blur(14px);
+}
