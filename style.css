@@ -2482,3 +2482,38 @@ section,
     max-height:84px !important;
   }
 }
+
+/* ===== CATALOG FILTER FUNCTION FINAL FIX ===== */
+/* Важнее карточных display:flex!important: скрытые карточки реально исчезают при поиске/фильтрах */
+.catalog-grid .catalog-card.hidden,
+.catalog-grid .place-card.hidden,
+.places-grid .place-card.hidden,
+.place-card.hidden{
+  display:none !important;
+}
+
+/* Клики по поиску/селекту и фильтрам не должны перекрываться карточками */
+.catalog-search,
+.custom-select,
+.custom-select-trigger,
+.custom-select-menu,
+.catalog-filter-row,
+.catalog-sidebar,
+.catalog-toolbar{
+  position:relative;
+}
+
+.catalog-search,
+.custom-select{
+  z-index:3000 !important;
+}
+
+.custom-select-menu{
+  z-index:3001 !important;
+}
+
+.catalog-filter-row,
+.catalog-sidebar,
+.catalog-toolbar{
+  z-index:20 !important;
+}

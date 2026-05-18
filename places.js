@@ -174,7 +174,11 @@
       const ok = typeOk && searchOk;
 
       card.classList.toggle('hidden', !ok);
-      card.style.display = ok ? '' : 'none';
+      if(ok){
+        card.style.removeProperty('display');
+      }else{
+        card.style.setProperty('display', 'none', 'important');
+      }
       if(ok) visible++;
     });
 
